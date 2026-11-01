@@ -1,0 +1,1101 @@
+/* =========================================
+   El Camino de la Salvación — estilos v0.3
+   Alto contraste y letra grande, modo claro y oscuro.
+   Diseño: una columna de tarjetas, como un cuaderno de viaje.
+   ========================================= */
+
+:root {
+  --fondo: #f3f6f1;
+  --tarjeta: #ffffff;
+  --texto: #111611;
+  --verde: #1b5e20;          /* botones: letra blanca encima */
+  --verde-hover: #0d3d12;
+  --verde-texto: #1b5e20;    /* títulos y textos de éxito */
+  --verde-suave: #e3efe0;
+  --borde: #1b5e20;
+  --barra-fondo: #d9e3d6;
+  --versiculo-fondo: #fff3cd;
+  --versiculo-texto: #3b2a00;
+  --versiculo-borde: #8a6d00;
+  --deshabilitado: #5c605c;
+  --enfoque: #e65100;
+  --peligro: #b71c1c;
+  --aviso-fondo: #111611;
+  --aviso-texto: #ffffff;
+  --fuente-titulo: "Lora", Georgia, "Times New Roman", serif;
+  --fuente-texto: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #0f1410;
+    --tarjeta: #18201a;
+    --texto: #f2f5f0;
+    --verde: #2e7d32;
+    --verde-hover: #1b5e20;
+    --verde-texto: #9ee39f;
+    --verde-suave: #223324;
+    --borde: #7bc67e;
+    --barra-fondo: #2b362c;
+    --versiculo-fondo: #2e2610;
+    --versiculo-texto: #ffe8a3;
+    --versiculo-borde: #e0b83c;
+    --deshabilitado: #4a4f4a;
+    --enfoque: #ffb74d;
+    --peligro: #e57373;
+    --aviso-fondo: #f2f5f0;
+    --aviso-texto: #111611;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --fondo: #0f1410;
+  --tarjeta: #18201a;
+  --texto: #f2f5f0;
+  --verde: #2e7d32;
+  --verde-hover: #1b5e20;
+  --verde-texto: #9ee39f;
+  --verde-suave: #223324;
+  --borde: #7bc67e;
+  --barra-fondo: #2b362c;
+  --versiculo-fondo: #2e2610;
+  --versiculo-texto: #ffe8a3;
+  --versiculo-borde: #e0b83c;
+  --deshabilitado: #4a4f4a;
+  --enfoque: #ffb74d;
+  --peligro: #e57373;
+  --aviso-fondo: #f2f5f0;
+  --aviso-texto: #111611;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;           /* letra base grande */
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-block: 24px 200px;  /* espacio abajo para el panel de avisos */
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+h1, h2 {
+  font-family: var(--fuente-titulo);
+  color: var(--verde-texto);
+  text-wrap: balance;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0.5em 0 0.2em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.4em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1.4em 0 0.4em;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.nota-gracia {
+  background: var(--tarjeta);
+  border: 2px solid var(--borde);
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+
+.botonera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+/* ===== Botones ===== */
+
+button {
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: var(--verde);
+  color: #ffffff;
+  border: 3px solid var(--verde);
+  padding: 14px 26px;
+  border-radius: 12px;
+  cursor: pointer;
+  min-height: 56px;
+}
+
+button:hover {
+  background: var(--verde-hover);
+  border-color: var(--verde-hover);
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 4px solid var(--enfoque);
+  outline-offset: 3px;
+}
+
+button.secundario {
+  background: var(--tarjeta);
+  color: var(--verde-texto);
+  border-color: var(--borde);
+}
+
+button.secundario:hover {
+  background: var(--verde-suave);
+}
+
+button.peligro,
+button.peligro:hover {
+  background: var(--tarjeta);
+  color: var(--peligro);
+  border-color: var(--peligro);
+}
+
+button:disabled,
+button:disabled:hover {
+  background: var(--deshabilitado);
+  border-color: var(--deshabilitado);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* ===== Tarjetas ===== */
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 2px solid var(--borde);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.barra-superior {
+  margin-bottom: 16px;
+}
+
+/* ===== Barra de XP ===== */
+
+.barra {
+  width: 100%;
+  height: 32px;
+  background: var(--barra-fondo);
+  border: 2px solid var(--borde);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#barraXP {
+  width: 0;
+  height: 100%;
+  background: var(--verde);
+  transition: width 0.8s;
+}
+
+#textoXP {
+  font-variant-numeric: tabular-nums;
+}
+
+.estadisticas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+}
+
+.estadisticas p {
+  margin: 0.3em 0;
+}
+
+/* ===== Mundos ===== */
+
+.mundos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mundo {
+  text-align: left;
+}
+
+.mundo.activo {
+  outline: 4px solid var(--enfoque);
+  outline-offset: 2px;
+}
+
+/* ===== Contenido del mundo ===== */
+
+.versiculo {
+  background: var(--versiculo-fondo);
+  color: var(--versiculo-texto);
+  border-left: 8px solid var(--versiculo-borde);
+  padding: 16px 20px;
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.versiculo p {
+  margin: 0;
+}
+
+.versiculo cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--fuente-texto);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.etiqueta {
+  display: block;
+  font-weight: 700;
+  margin: 16px 0 6px;
+}
+
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 12px;
+  border: 2px solid var(--texto);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  color: var(--texto);
+  background: var(--tarjeta);
+}
+
+.ayuda {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.exito {
+  color: var(--verde-texto);
+  font-weight: 700;
+}
+
+.reflexion-guardada {
+  background: var(--verde-suave);
+  padding: 12px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===== Listas ===== */
+
+.lista {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.lista li {
+  margin: 0.3em 0;
+}
+
+.vacio {
+  font-style: italic;
+  list-style: none;
+  margin-left: -1.2em;
+}
+
+/* ===== Panel de avisos ===== */
+
+#avisos {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--aviso-fondo);
+  color: var(--aviso-texto);
+  padding-top: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-top: 4px solid var(--enfoque);
+  z-index: 10;
+}
+
+#avisos .contenido {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+#avisos p {
+  margin: 0.2em 0;
+}
+
+#btnCerrarAvisos {
+  margin-top: 10px;
+  background: var(--aviso-texto);
+  color: var(--aviso-fondo);
+  border-color: var(--aviso-texto);
+}
+
+/* ===== Piezas de la versión 0.4 ===== */
+
+.version {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.9rem;
+}
+
+.eyebrow,
+.rotulo {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  color: var(--verde-texto);
+  margin: 1em 0 0.2em;
+}
+
+.eyebrow {
+  margin-top: 0;
+}
+
+.objetivos {
+  margin-bottom: 0.5em;
+}
+
+.ensenanza {
+  margin-top: 14px;
+}
+
+.ensenanza p {
+  margin: 0 0 0.4em;
+}
+
+.referencias {
+  font-weight: 700;
+}
+
+.opciones.columna {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.opciones.columna button {
+  text-align: left;
+}
+
+.consecuencia {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.consecuencia:empty {
+  display: none;
+}
+
+.consecuencia.mala {
+  border-color: var(--peligro);
+  background: var(--tarjeta);
+  color: var(--texto);
+}
+
+.consecuencia.buena {
+  border-color: var(--borde);
+  background: var(--verde-suave);
+  color: var(--texto);
+  font-weight: 700;
+}
+
+.final {
+  margin-top: 24px;
+}
+
+/* Desafío de cadenas (nivel 5) */
+
+.cadenas {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cadena {
+  padding: 10px 14px;
+  border: 2px dashed var(--peligro);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.cadena.rota {
+  border-style: solid;
+  border-color: var(--borde);
+  background: var(--verde-suave);
+  color: var(--verde-texto);
+}
+
+.mentira {
+  border-left: 8px solid var(--peligro);
+  padding: 12px 16px;
+  background: var(--tarjeta);
+  font-size: 1.1rem;
+}
+
+.verso-boton {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 400;
+}
+
+.verso-boton strong {
+  font-size: 1.05rem;
+}
+
+#mundoActual h3 {
+  border-top: 2px solid var(--barra-fondo);
+  padding-top: 0.9em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #barraXP { transition: none; }
+}
+
+/* ===== Versión 1.0: insignia, retos, secundarias y final ===== */
+
+.insignia {
+  display: inline-block;
+  background: var(--verde-suave);
+  border: 2px solid var(--borde);
+  color: var(--verde-texto);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 0 0 12px;
+}
+
+.progreso-retos {
+  font-weight: 700;
+  margin: 8px 0 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.secundarias {
+  display: grid;
+  gap: 12px;
+}
+
+.secundaria {
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.secundaria p {
+  margin: 0;
+}
+
+.secundaria.hecha {
+  background: var(--verde-suave);
+}
+
+.final-card {
+  margin-top: 24px;
+  border: 3px solid var(--versiculo-borde);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.final-card h3 {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin: 0.4em 0 0;
+  font-family: var(--fuente-titulo);
+  font-size: 1.35rem;
+  color: var(--verde-texto);
+}
+
+.final-card p {
+  margin: 0;
+}
+
+.oracion {
+  font-family: var(--fuente-titulo);
+  font-size: 1.15rem;
+  background: var(--verde-suave);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+/* ===== Versión 1.1: Libro de versículos ===== */
+
+.barra-superior {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resumen-libro {
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.habilidades {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.habilidad-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border: 2px dashed var(--deshabilitado);
+  border-radius: 10px;
+}
+
+.habilidad-item.activa {
+  border: 2px solid var(--versiculo-borde);
+  background: var(--versiculo-fondo);
+  color: var(--versiculo-texto);
+}
+
+.cartas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.carta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  padding: 12px 14px;
+  min-width: 0;
+  background: var(--tarjeta);
+  color: var(--verde-texto);
+  border: 2px solid var(--borde);
+  font-weight: 400;
+}
+
+.carta:hover {
+  background: var(--verde-suave);
+}
+
+.carta.memorizada,
+.carta.memorizada:hover {
+  background: var(--versiculo-fondo);
+  color: var(--versiculo-texto);
+  border-color: var(--versiculo-borde);
+}
+
+.carta.activo {
+  outline: 4px solid var(--enfoque);
+  outline-offset: 2px;
+}
+
+.carta-num {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.carta-cita {
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.carta-estado {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.practica:not(:empty) {
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 2px solid var(--barra-fondo);
+}
+
+.practica-verso p {
+  line-height: 2;
+}
+
+.hueco {
+  display: inline-block;
+  min-width: 3.5em;
+  padding: 0 4px;
+  border-bottom: 3px solid var(--versiculo-texto);
+  font-family: var(--fuente-texto);
+  font-weight: 700;
+}
+
+.hueco.actual {
+  background: var(--tarjeta);
+  outline: 3px solid var(--enfoque);
+  border-radius: 4px;
+}
+
+.hueco.lleno {
+  border-bottom-style: double;
+}
+
+.banco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.banco .palabra {
+  min-height: 52px;
+  padding: 10px 18px;
+}
+
+button.habilidad {
+  background: var(--versiculo-fondo);
+  color: var(--versiculo-texto);
+  border: 3px dashed var(--versiculo-borde);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+button.habilidad:hover {
+  background: var(--versiculo-fondo);
+  border-style: solid;
+}
+
+button.descartada,
+button.descartada:hover {
+  text-decoration: line-through;
+}
+
+/* ===== Versión 1.2: mentores y jefes finales ===== */
+
+.mentor,
+.jefe {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.mentor {
+  background: var(--verde-suave);
+  border: 2px solid var(--borde);
+}
+
+.mentor-icono,
+.jefe-icono {
+  font-size: 2.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.mentor-cuerpo {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mentor-cuerpo .rotulo {
+  margin-top: 0;
+}
+
+.mentor-nombre,
+.jefe-nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 1.35rem;
+  color: var(--verde-texto);
+  line-height: 1.2;
+}
+
+.mentor-titulo {
+  font-weight: 700;
+}
+
+.mentor-mensaje {
+  margin: 8px 0 4px;
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+}
+
+.mentor-historia {
+  margin: 0;
+  font-weight: 700;
+}
+
+.jefe {
+  background: var(--tarjeta);
+  border: 3px solid var(--peligro);
+}
+
+.jefe-nombre {
+  color: var(--peligro);
+}
+
+.jefe-amenaza {
+  margin: 6px 0 0;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.medidor {
+  margin: 6px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.medidor-iconos {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+}
+
+.pregunta-jefe {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.caida {
+  border: 2px solid var(--versiculo-borde);
+  background: var(--versiculo-fondo);
+  color: var(--versiculo-texto);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+div.carta.bloqueada {
+  background: var(--deshabilitado);
+  border-color: var(--deshabilitado);
+  color: #ffffff;
+}
+
+#avisosTexto {
+  max-height: 35vh;
+  overflow-y: auto;
+}
+
+/* ===== Versión 1.3: selector de edad ===== */
+
+.edad {
+  margin-top: 24px;
+}
+
+.selector-edad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.opcion-edad {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+.opcion-edad strong {
+  font-size: 1.15rem;
+}
+
+.opcion-edad span {
+  font-weight: 400;
+}
+
+.opcion-edad[aria-pressed="true"],
+.opcion-edad[aria-pressed="true"]:hover {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #ffffff;
+}
+
+.descripcion-edad {
+  margin: 12px 0 0;
+  padding: 12px 16px;
+  border-left: 6px solid var(--borde);
+  background: var(--tarjeta);
+  border-radius: 8px;
+}
+
+.extra-edad {
+  border-left: 6px solid var(--versiculo-borde);
+  padding: 4px 0 4px 14px;
+}
+
+/* ===== Versión 1.4: cada edad se ve distinta ===== */
+/* Niños: azul y letra más grande. Jóvenes: morado. Adultos: verde (el original). */
+
+html.modo-ninos {
+  font-size: 22px;
+  --fondo: #eef4fc;
+  --verde: #0d47a1;
+  --verde-hover: #082c66;
+  --verde-texto: #0d47a1;
+  --verde-suave: #dde9fa;
+  --borde: #0d47a1;
+  --barra-fondo: #cfdcf0;
+}
+
+html.modo-jovenes {
+  --fondo: #f5f0f9;
+  --verde: #4a148c;
+  --verde-hover: #2e0b5a;
+  --verde-texto: #4a148c;
+  --verde-suave: #ede3f6;
+  --borde: #4a148c;
+  --barra-fondo: #dccdea;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-ninos:not([data-theme="light"]) {
+    --fondo: #0d1420;
+    --tarjeta: #162133;
+    --verde: #1565c0;
+    --verde-hover: #0d47a1;
+    --verde-texto: #9cc8ff;
+    --verde-suave: #1c2d47;
+    --borde: #7fb2f0;
+    --barra-fondo: #283a55;
+  }
+  html.modo-jovenes:not([data-theme="light"]) {
+    --fondo: #140f1a;
+    --tarjeta: #21182b;
+    --verde: #6a1b9a;
+    --verde-hover: #4a148c;
+    --verde-texto: #dcb2f2;
+    --verde-suave: #2f2240;
+    --borde: #c48ee0;
+    --barra-fondo: #3a2b4a;
+  }
+}
+
+html.modo-ninos[data-theme="dark"] {
+  --fondo: #0d1420;
+  --tarjeta: #162133;
+  --verde: #1565c0;
+  --verde-hover: #0d47a1;
+  --verde-texto: #9cc8ff;
+  --verde-suave: #1c2d47;
+  --borde: #7fb2f0;
+  --barra-fondo: #283a55;
+}
+
+html.modo-jovenes[data-theme="dark"] {
+  --fondo: #140f1a;
+  --tarjeta: #21182b;
+  --verde: #6a1b9a;
+  --verde-hover: #4a148c;
+  --verde-texto: #dcb2f2;
+  --verde-suave: #2f2240;
+  --borde: #c48ee0;
+  --barra-fondo: #3a2b4a;
+}
+
+.modo-barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.modo-actual {
+  display: inline-block;
+  background: var(--verde);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.boton-pequeno {
+  min-height: 44px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+}
+
+.recuadro-edad {
+  border: 3px solid var(--borde);
+  background: var(--verde-suave);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+
+.recuadro-edad p {
+  margin: 0 0 8px;
+}
+
+.recuadro-edad p:last-child {
+  margin-bottom: 0;
+}
+
+.recuadro-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--verde-texto);
+}
+
+.recuadro-destacado {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navegacion-etapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid var(--barra-fondo);
+}
+
+/* ===== Versión 1.5: modo grupo y guía para maestros ===== */
+
+.recuadro-grupo {
+  border: 3px dashed var(--borde);
+  background: var(--tarjeta);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+
+.recuadro-grupo p {
+  margin: 0 0 8px;
+}
+
+.marcador {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.equipo.turno {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #ffffff;
+}
+
+.estructura {
+  display: grid;
+  gap: 10px;
+}
+
+.estructura-fila {
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--barra-fondo);
+}
+
+.estructura-fila p {
+  margin: 2px 0 0;
+}
+
+.estructura-tiempo {
+  color: var(--verde-texto);
+  font-variant-numeric: tabular-nums;
+}
+
+.guia-etapa {
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.guia-etapa summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--verde-texto);
+  min-height: 52px;
+}
+
+.guia-etapa[open] summary {
+  border-bottom: 2px solid var(--barra-fondo);
+}
+
+.guia-etapa summary:focus-visible {
+  outline: 4px solid var(--enfoque);
+  outline-offset: 2px;
+}
+
+.guia-cuerpo {
+  padding: 4px 16px 16px;
+}
+
+#pantallaGuia h1 {
+  font-size: 1.9rem;
+}

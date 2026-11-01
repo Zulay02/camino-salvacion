@@ -1,0 +1,15 @@
+{
+  "name": "El Camino de la Salvación",
+  "short_name": "Camino",
+  "description": "Juego bíblico educativo en 12 etapas sobre el plan de salvación.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f1",
+  "theme_color": "#1b5e20",
+  "icons": [
+    { "src": "assets/iconos/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/iconos/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

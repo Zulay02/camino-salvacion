@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juego bíblico educativo en 12 etapas sobre el plan de salvación.">
+  <meta name="theme-color" content="#1b5e20">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/iconos/icono-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/iconos/icono-192.png">
+  <title>El Camino de la Salvación</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <main class="contenedor">
+
+    <!-- ===== PANTALLA DE INICIO ===== -->
+    <section id="pantallaInicio">
+      <h1>El Camino de la Salvación</h1>
+      <p class="subtitulo">Un viaje en 12 etapas a través del plan de Dios.</p>
+
+      <p class="nota-gracia">
+        La salvación es un regalo de Dios por gracia (Efesios 2:8-9).
+        En este juego, los puntos miden tu crecimiento como discípulo,
+        no lo que te hace salvo.
+      </p>
+
+      <div class="edad">
+        <p class="rotulo" id="tituloEdad">¿Quién va a jugar?</p>
+        <div id="selectorEdad" class="selector-edad" role="group" aria-labelledby="tituloEdad"></div>
+        <p id="descripcionEdad" class="descripcion-edad" aria-live="polite"></p>
+      </div>
+
+      <div class="edad">
+        <p class="rotulo" id="tituloJuego">¿Cómo van a jugar?</p>
+        <div id="selectorJuego" class="selector-edad" role="group" aria-labelledby="tituloJuego"></div>
+      </div>
+
+      <div class="botonera">
+        <button id="btnIniciar" type="button">Iniciar aventura</button>
+        <button id="btnReiniciar" type="button" class="secundario oculto">Reiniciar progreso</button>
+        <button id="btnGuia" type="button" class="secundario">👩‍🏫 Guía para maestros y líderes</button>
+      </div>
+
+      <p class="version">Versión 1.5 · Textos bíblicos: Reina-Valera 1960</p>
+    </section>
+
+    <!-- ===== GUÍA PARA MAESTROS ===== -->
+    <section id="pantallaGuia" class="oculto">
+      <div class="barra-superior">
+        <button id="btnSalirGuia" type="button" class="secundario">← Volver al inicio</button>
+      </div>
+      <h1>Guía para maestros y líderes</h1>
+      <p class="subtitulo">Cómo usar El Camino de la Salvación en grupos, clases y familias.</p>
+      <div id="contenidoGuia"></div>
+      <div class="navegacion-etapa">
+        <button id="btnSalirGuia2" type="button" class="secundario">← Volver al inicio</button>
+      </div>
+    </section>
+
+    <!-- ===== PANTALLA DE JUEGO ===== -->
+    <section id="pantallaJuego" class="oculto">
+
+      <div class="barra-superior">
+        <button id="btnMenu" type="button" class="secundario">← Menú</button>
+        <button id="btnLibro" type="button" class="secundario">📖 Mi libro de versículos</button>
+      </div>
+
+      <div class="modo-barra">
+        <span id="modoActual" class="modo-actual">Modo</span>
+        <button id="btnCambiarEdad" type="button" class="secundario boton-pequeno">Cambiar edad</button>
+      </div>
+
+      <!-- Estado del jugador -->
+      <section id="jugador" class="tarjeta">
+        <h2>Estado espiritual</h2>
+        <p class="nivel-linea">
+          Nivel <strong id="nivel">1</strong> · <strong id="rango">Peregrino Novato</strong>
+        </p>
+        <p id="transformacion" class="insignia oculto">🕊 Nueva criatura en Cristo (2 Corintios 5:17)</p>
+
+        <div id="barraContenedor" class="barra" role="progressbar"
+             aria-label="Progreso al siguiente nivel"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="barraXP"></div>
+        </div>
+        <p id="textoXP">0 / 50 XP</p>
+
+        <div id="estadisticas" class="estadisticas"></div>
+      </section>
+
+      <!-- Mapa del viaje -->
+      <section id="mapa" class="tarjeta">
+        <h2>Mapa del camino</h2>
+        <div id="mundos" class="mundos"></div>
+      </section>
+
+      <!-- Contenido del nivel elegido -->
+      <section id="mundoActual" class="tarjeta"></section>
+
+      <!-- Libro de versículos (colección) -->
+      <section id="libro" class="tarjeta"></section>
+
+      <!-- Inventario -->
+      <section class="tarjeta">
+        <h2>Herramientas espirituales</h2>
+        <ul id="inventario" class="lista"></ul>
+      </section>
+
+      <!-- Logros -->
+      <section class="tarjeta">
+        <h2>Logros</h2>
+        <ul id="logros" class="lista"></ul>
+      </section>
+      <div class="navegacion-etapa">
+        <button id="btnArriba" type="button" class="secundario">⬆ Volver arriba</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Avisos (reemplazan a los alert) -->
+  <div id="avisos" class="oculto">
+    <div class="contenido">
+      <div id="avisosTexto" role="status" aria-live="polite"></div>
+      <button id="btnCerrarAvisos" type="button">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/niveles.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+
+</html>

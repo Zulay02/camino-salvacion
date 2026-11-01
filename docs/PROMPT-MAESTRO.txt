@@ -1,0 +1,384 @@
+PROMPT MAESTRO PARA CREAR UN JUEGO BÍBLICO INTERACTIVO DEL CAMINO DE SALVACIÓN
+Plain Text
+Actúa como un equipo compuesto por:
+ 
+- Teólogos bíblicos especializados en doctrina de la salvación.
+- Diseñadores AAA de videojuegos educativos.
+- Expertos en gamificación cristiana.
+- Psicólogos educativos.
+- Diseñadores de narrativa interactiva.
+- Especialistas en aprendizaje basado en experiencias.
+- Expertos en apologética bíblica.
+- Diseñadores de sistemas RPG espirituales.
+ 
+OBJETIVO GENERAL
+ 
+Diseñar un videojuego interactivo didáctico llamado:
+ 
+"EL CAMINO DE LA SALVACIÓN"
+ 
+El propósito principal es enseñar progresivamente la historia de la redención y el proceso espiritual de la salvación utilizando mecánicas de juego, exploración, desafíos, acertijos, combate espiritual simbólico, toma de decisiones y resolución de problemas basados en la Biblia.
+ 
+--------------------------------------------------
+PRINCIPIOS DOCTRINALES
+--------------------------------------------------
+ 
+Todo el contenido debe fundamentarse exclusivamente en la Biblia.
+ 
+Cada nivel debe incluir:
+ 
+- Versículo clave
+- Enseñanza doctrinal
+- Aplicación práctica
+- Preguntas reflexivas
+- Consecuencias de decisiones correctas e incorrectas
+- Referencias bíblicas adicionales
+ 
+No inventar doctrinas.
+ 
+Siempre mostrar varias referencias bíblicas que respalden cada concepto.
+ 
+--------------------------------------------------
+ESTRUCTURA GENERAL DEL JUEGO
+--------------------------------------------------
+ 
+Diseñar el juego como un viaje espiritual progresivo.
+ 
+Cada nivel representa una etapa del camino de salvación.
+ 
+NIVEL 1
+LA CREACIÓN
+ 
+Objetivos:
+- Comprender el diseño original de Dios.
+- Descubrir el propósito humano.
+ 
+Versículos:
+- Génesis 1
+- Génesis 2
+ 
+Mecánicas:
+- Exploración
+- Descubrimiento
+- Recolección de verdades bíblicas
+ 
+Trampas:
+- Orgullo
+- Independencia de Dios
+ 
+--------------------------------------------------
+ 
+NIVEL 2
+LA CAÍDA
+ 
+Versículos:
+- Génesis 3
+ 
+Objetivos:
+- Comprender el origen del pecado.
+- Identificar engaños espirituales.
+ 
+Mecánicas:
+- Detección de mentiras
+- Discernimiento
+ 
+Jefe final:
+"La Serpiente"
+ 
+Trampas:
+- Duda
+- Desobediencia
+- Autojustificación
+ 
+--------------------------------------------------
+ 
+NIVEL 3
+CONCIENCIA DE PECADO
+ 
+Versículos:
+- Romanos 3
+- Romanos 6:23
+ 
+Objetivos:
+- Reconocer la condición humana.
+ 
+Mecánicas:
+- Espejo espiritual
+- Evaluación personal
+ 
+Enemigos:
+- Negación
+- Orgullo
+- Hipocresía
+ 
+--------------------------------------------------
+ 
+NIVEL 4
+EL LLAMADO DE DIOS
+ 
+Versículos:
+- Juan 6:44
+- Apocalipsis 3:20
+ 
+Objetivos:
+- Reconocer la voz de Dios.
+ 
+Mecánicas:
+- Escuchar y discernir.
+ 
+--------------------------------------------------
+ 
+NIVEL 5
+ARREPENTIMIENTO
+ 
+Versículos:
+- Hechos 3:19
+- Lucas 15
+ 
+Objetivos:
+- Comprender el verdadero arrepentimiento.
+ 
+Desafíos:
+- Romper cadenas.
+- Abandonar caminos equivocados.
+ 
+--------------------------------------------------
+ 
+NIVEL 6
+FE EN CRISTO
+ 
+Versículos:
+- Juan 3:16
+- Efesios 2:8-9
+ 
+Objetivos:
+- Confiar completamente en Cristo.
+ 
+Mecánicas:
+- Puente de la fe.
+- Cruzar abismos mediante promesas bíblicas.
+ 
+--------------------------------------------------
+ 
+NIVEL 7
+JUSTIFICACIÓN
+ 
+Versículos:
+- Romanos 5:1
+ 
+Objetivos:
+- Comprender la justicia imputada de Cristo.
+ 
+Mecánicas:
+- Tribunal celestial.
+ 
+--------------------------------------------------
+ 
+NIVEL 8
+NUEVO NACIMIENTO
+ 
+Versículos:
+- Juan 3
+ 
+Objetivos:
+- Entender la regeneración.
+ 
+Mecánicas:
+- Transformación del personaje.
+ 
+--------------------------------------------------
+ 
+NIVEL 9
+SANTIFICACIÓN
+ 
+Versículos:
+- Gálatas 5
+- Efesios 6
+ 
+Objetivos:
+- Crecer espiritualmente.
+ 
+Sistema RPG:
+ 
+Atributos:
+ 
+FE
+OBEDIENCIA
+AMOR
+SABIDURÍA
+HUMILDAD
+PERSEVERANCIA
+ 
+Misiones:
+- Oración
+- Estudio bíblico
+- Servicio
+- Evangelismo
+ 
+--------------------------------------------------
+ 
+NIVEL 10
+GUERRA ESPIRITUAL
+ 
+Versículos:
+- Efesios 6:10-18
+ 
+Objetivos:
+- Aprender a usar la armadura de Dios.
+ 
+Mecánicas:
+- Combate estratégico bíblico.
+ 
+Enemigos:
+ 
+Mentira
+Temor
+Tentación
+Desánimo
+Amargura
+ 
+--------------------------------------------------
+ 
+NIVEL 11
+PERSEVERANCIA
+ 
+Versículos:
+- Hebreos 12
+ 
+Objetivos:
+- Mantenerse firme.
+ 
+Mecánicas:
+- Carrera espiritual.
+ 
+--------------------------------------------------
+ 
+NIVEL 12
+GLORIFICACIÓN
+ 
+Versículos:
+- Apocalipsis 21
+- Apocalipsis 22
+ 
+Objetivos:
+- Alcanzar la meta final.
+ 
+Evento final:
+Ingreso a la Nueva Jerusalén.
+ 
+--------------------------------------------------
+MECÁNICAS EDUCATIVAS
+--------------------------------------------------
+ 
+Crear:
+ 
+1. Árbol de progreso espiritual.
+ 
+2. Sistema de preguntas bíblicas.
+ 
+3. Cartas coleccionables de personajes bíblicos.
+ 
+4. Memorizar versículos para desbloquear habilidades.
+ 
+5. Retos diarios.
+ 
+6. Estudios bíblicos interactivos.
+ 
+7. Misiones secundarias.
+ 
+8. Batallas de discernimiento doctrinal.
+ 
+9. Decisiones morales basadas en Biblia.
+ 
+10. Puzzles basados en versículos.
+ 
+--------------------------------------------------
+TRAMPAS ESPIRITUALES
+--------------------------------------------------
+ 
+Diseñar zonas donde aparezcan:
+ 
+- Orgullo
+- Duda
+- Temor
+- Legalismo
+- Materialismo
+- Idolatría
+- Tibieza espiritual
+- Falsas doctrinas
+- Autosuficiencia
+- Amargura
+- Falta de perdón
+ 
+Para cada trampa proporcionar:
+ 
+- Cómo se manifiesta
+- Versículos relacionados
+- Consecuencias
+- Cómo superarla bíblicamente
+ 
+--------------------------------------------------
+SISTEMA DE RECOMPENSAS
+--------------------------------------------------
+ 
+No utilizar recompensas materiales.
+ 
+Las recompensas deben ser:
+ 
+- Conocimiento bíblico
+- Versículos desbloqueados
+- Sabiduría
+- Discernimiento
+- Herramientas espirituales
+- Armadura de Dios
+- Fruto del Espíritu
+ 
+--------------------------------------------------
+SALIDA ESPERADA
+--------------------------------------------------
+ 
+Generar:
+ 
+1. Historia completa del juego.
+2. Mapa general del viaje espiritual.
+3. Diseño de cada nivel.
+4. Misiones principales.
+5. Misiones secundarias.
+6. Sistema de progresión.
+7. Árbol de habilidades espirituales.
+8. Personajes bíblicos mentores.
+9. Enemigos simbólicos.
+10. Jefes finales de cada nivel.
+11. Recompensas.
+12. Versículos de respaldo.
+13. Sistema de evaluación espiritual.
+14. Material pedagógico para maestros.
+15. Adaptación para niños.
+16. Adaptación para jóvenes.
+17. Adaptación para adultos.
+18. Sistema cooperativo para grupos pequeños.
+19. Sistema de devocionales diarios.
+20. Guion completo para implementar el juego en Unity, Godot o Unreal Engine.
+ 
+Desarrolla todo con profundidad teológica, precisión bíblica, creatividad educativa y enfoque de transformación espiritual.
+--------------------------------------------------
+MÓDULO ADICIONAL: NIVEL PROFESIONAL
+--------------------------------------------------
+
+Para convertirlo en un juego realmente adictivo y formativo, incorpora mecánicas inspiradas en:
+
+- Zelda (exploración)
+- Journey (peregrinación espiritual)
+- Pokémon (colección de versículos)
+- Dark Souls (perseverancia)
+- Minecraft (construcción del carácter)
+- RPG clásicos (progresión del creyente)
+
+Todas las mecánicas deben ser reinterpretadas desde una cosmovisión bíblica y educativa.
+
+Estructura el juego como un "Peregrino hacia la Ciudad Celestial", combinando elementos de los libros de Hebreos, Efesios y Apocalipsis, donde:
+
+- Cada decisión afecta el crecimiento espiritual del personaje.
+- Cada decisión desbloquea conocimiento bíblico progresivo.
+
+Así el juego se convierte en una herramienta de discipulado, además de un simple juego.
