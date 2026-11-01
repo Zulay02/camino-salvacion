@@ -138,3 +138,12 @@ Cambia el número en la primera línea de `sw.js` (por ejemplo, de `v1.0` a `v1.
 ## Texto bíblico
 
 Las citas bíblicas son de la versión Reina-Valera 1960 © Sociedades Bíblicas en América Latina, 1960; renovado © Sociedades Bíblicas Unidas, 1988. Antes de publicar el juego, conviene revisar la política de citas de las Sociedades Bíblicas para uso en obras publicadas.
+
+---
+
+## Derechos de autor
+
+© 2026 María Zulay Núñez Varela. **Todos los derechos reservados.**
+
+Puedes jugar libremente desde el sitio web del juego. Para copiar, modificar, distribuir o usar cualquier parte de esta obra, se necesita autorización previa y por escrito de la autora. Consulta el archivo [`LICENSE`](LICENSE).
+
