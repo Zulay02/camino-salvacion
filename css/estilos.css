@@ -1153,3 +1153,11 @@ div.carta.bloqueada {
 .consecuencia {
   overflow-wrap: break-word;
 }
+
+/* Los títulos también se parten si la letra del teléfono es muy grande. */
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
