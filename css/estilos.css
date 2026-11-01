@@ -1119,3 +1119,37 @@ div.carta.bloqueada {
   border-color: var(--deshabilitado);
   color: #FFFFFF;
 }
+
+/* ===== Versión 1.6.1: nada se sale de las cajas en teléfonos ===== */
+
+/* En teléfonos, el tiempo va arriba y la descripción debajo. */
+.estructura-fila {
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
+@media (min-width: 600px) {
+  .estructura-fila {
+    grid-template-columns: 6.5em 1fr;
+    gap: 12px;
+  }
+}
+
+.estructura-fila > *,
+.mentor-cuerpo,
+.recuadro-edad,
+.recuadro-grupo,
+.secundaria,
+.carta {
+  min-width: 0;
+}
+
+/* Las palabras largas se parten antes de salirse de una caja. */
+.tarjeta,
+.recuadro-edad,
+.recuadro-grupo,
+.guia-cuerpo,
+.versiculo,
+.consecuencia {
+  overflow-wrap: break-word;
+}
