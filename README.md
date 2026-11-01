@@ -37,7 +37,7 @@ La siguiente etapa se abre al completar la anterior. El progreso se guarda solo,
 
 ### Para todas las edades
 
-Al iniciar, el jugador elige quién va a jugar. Durante el juego, una etiqueta arriba muestra el modo, y el botón «Cambiar edad» permite cambiarlo sin perder el progreso. Cada edad tiene su color (azul para niños, morado para jóvenes y verde para adultos) y, al comienzo de cada etapa, un recuadro con su contenido propio.
+Al iniciar, el jugador elige quién va a jugar. Durante el juego, una etiqueta arriba muestra el modo, y el botón «Cambiar edad» permite cambiarlo sin perder el progreso. Cada edad tiene su color de la marca Familias de Paz (Azul Familias para niños, Azul Noche con naranja para jóvenes y Verde Oliva para adultos) y, al comienzo de cada etapa, un recuadro con su contenido propio.
 
 | Modo | Contenido | Dificultad |
 |---|---|---|

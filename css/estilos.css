@@ -1,72 +1,82 @@
 /* =========================================
-   El Camino de la Salvación — estilos v0.3
+   El Camino de la Salvación — estilos
+   Colores oficiales de la marca Familias de Paz.
    Alto contraste y letra grande, modo claro y oscuro.
    Diseño: una columna de tarjetas, como un cuaderno de viaje.
+
+   Paleta de la marca:
+   Azul Familias #0A4DBC · Azul Noche #14305C · Azul Paz #1F5FAE
+   Verde Oliva #5E6B1F · Naranja Esperanza #E26C22 (solo decoración)
+   Texto #1B2233 · Marfil #FBF8F1 · Crema #F3EBDD · Naranja claro #F4A769
    ========================================= */
 
+/* Base = modo Adultos (verde oliva de la marca) */
 :root {
-  --fondo: #f3f6f1;
-  --tarjeta: #ffffff;
-  --texto: #111611;
-  --verde: #1b5e20;          /* botones: letra blanca encima */
-  --verde-hover: #0d3d12;
-  --verde-texto: #1b5e20;    /* títulos y textos de éxito */
-  --verde-suave: #e3efe0;
-  --borde: #1b5e20;
-  --barra-fondo: #d9e3d6;
-  --versiculo-fondo: #fff3cd;
-  --versiculo-texto: #3b2a00;
-  --versiculo-borde: #8a6d00;
-  --deshabilitado: #5c605c;
-  --enfoque: #e65100;
-  --peligro: #b71c1c;
-  --aviso-fondo: #111611;
-  --aviso-texto: #ffffff;
+  --fondo: #FBF8F1;          /* marfil */
+  --tarjeta: #FFFFFF;
+  --texto: #1B2233;          /* 15:1 sobre marfil */
+  --verde: #5E6B1F;          /* botones: letra blanca encima, 5,8:1 */
+  --verde-hover: #46501A;
+  --verde-texto: #5E6B1F;    /* títulos: 5,5:1 sobre marfil */
+  --verde-suave: #EEF0E0;
+  --borde: #5E6B1F;
+  --barra-fondo: #D9CFBE;
+  --versiculo-fondo: #1B2233; /* recuadros de lectura oscuros: letra clara */
+  --versiculo-texto: #FFFFFF;
+  --versiculo-borde: #F4A769;
+  --versiculo-cita: #F4A769;  /* 8:1 */
+  --deshabilitado: #4A5068;
+  --enfoque: #E26C22;         /* contorno de foco (decoración) */
+  --peligro: #B71C1C;
+  --aviso-fondo: #1B2233;
+  --aviso-texto: #FFFFFF;
   --fuente-titulo: "Lora", Georgia, "Times New Roman", serif;
   --fuente-texto: "Nunito Sans", "Segoe UI", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --fondo: #0f1410;
-    --tarjeta: #18201a;
-    --texto: #f2f5f0;
-    --verde: #2e7d32;
-    --verde-hover: #1b5e20;
-    --verde-texto: #9ee39f;
-    --verde-suave: #223324;
-    --borde: #7bc67e;
-    --barra-fondo: #2b362c;
-    --versiculo-fondo: #2e2610;
-    --versiculo-texto: #ffe8a3;
-    --versiculo-borde: #e0b83c;
-    --deshabilitado: #4a4f4a;
-    --enfoque: #ffb74d;
-    --peligro: #e57373;
-    --aviso-fondo: #f2f5f0;
-    --aviso-texto: #111611;
+    --fondo: #1B2233;
+    --tarjeta: #2B3452;
+    --texto: #FFFFFF;
+    --verde: #5E6B1F;
+    --verde-hover: #46501A;
+    --verde-texto: #C9D48E;
+    --verde-suave: #343E5E;
+    --borde: #C9D48E;
+    --barra-fondo: #4A5570;
+    --versiculo-fondo: #14305C;
+    --versiculo-texto: #FFFFFF;
+    --versiculo-borde: #F4A769;
+    --versiculo-cita: #F4A769;
+    --deshabilitado: #4A5068;
+    --enfoque: #F4A769;
+    --peligro: #FF9E94;
+    --aviso-fondo: #F3EBDD;
+    --aviso-texto: #1B2233;
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --fondo: #0f1410;
-  --tarjeta: #18201a;
-  --texto: #f2f5f0;
-  --verde: #2e7d32;
-  --verde-hover: #1b5e20;
-  --verde-texto: #9ee39f;
-  --verde-suave: #223324;
-  --borde: #7bc67e;
-  --barra-fondo: #2b362c;
-  --versiculo-fondo: #2e2610;
-  --versiculo-texto: #ffe8a3;
-  --versiculo-borde: #e0b83c;
-  --deshabilitado: #4a4f4a;
-  --enfoque: #ffb74d;
-  --peligro: #e57373;
-  --aviso-fondo: #f2f5f0;
-  --aviso-texto: #111611;
+  --fondo: #1B2233;
+  --tarjeta: #2B3452;
+  --texto: #FFFFFF;
+  --verde: #5E6B1F;
+  --verde-hover: #46501A;
+  --verde-texto: #C9D48E;
+  --verde-suave: #343E5E;
+  --borde: #C9D48E;
+  --barra-fondo: #4A5570;
+  --versiculo-fondo: #14305C;
+  --versiculo-texto: #FFFFFF;
+  --versiculo-borde: #F4A769;
+  --versiculo-cita: #F4A769;
+  --deshabilitado: #4A5068;
+  --enfoque: #F4A769;
+  --peligro: #FF9E94;
+  --aviso-fondo: #F3EBDD;
+  --aviso-texto: #1B2233;
   color-scheme: dark;
 }
 
@@ -273,6 +283,7 @@ button:disabled:hover {
 }
 
 .versiculo cite {
+  color: var(--versiculo-cita);
   display: block;
   margin-top: 8px;
   font-family: var(--fuente-texto);
@@ -880,72 +891,60 @@ div.carta.bloqueada {
 }
 
 /* ===== Versión 1.4: cada edad se ve distinta ===== */
-/* Niños: azul y letra más grande. Jóvenes: morado. Adultos: verde (el original). */
+/* Cada edad usa un color de la marca Familias de Paz. */
 
+/* Niños: Azul Familias de la marca y letra más grande. */
 html.modo-ninos {
   font-size: 22px;
-  --fondo: #eef4fc;
-  --verde: #0d47a1;
-  --verde-hover: #082c66;
-  --verde-texto: #0d47a1;
-  --verde-suave: #dde9fa;
-  --borde: #0d47a1;
-  --barra-fondo: #cfdcf0;
+  --verde: #0A4DBC;          /* letra blanca encima: 7,5:1 */
+  --verde-hover: #083A8F;
+  --verde-texto: #0A4DBC;    /* 7,1:1 sobre marfil */
+  --verde-suave: #E6EEF9;
+  --borde: #0A4DBC;
+  --barra-fondo: #CFDCF0;
 }
 
+/* Jóvenes: Azul Noche de la marca con detalles en Naranja Esperanza. */
 html.modo-jovenes {
-  --fondo: #f5f0f9;
-  --verde: #4a148c;
-  --verde-hover: #2e0b5a;
-  --verde-texto: #4a148c;
-  --verde-suave: #ede3f6;
-  --borde: #4a148c;
-  --barra-fondo: #dccdea;
+  --verde: #14305C;          /* letra blanca encima: 13:1 */
+  --verde-hover: #0C1F3D;
+  --verde-texto: #14305C;    /* 12:1 sobre marfil */
+  --verde-suave: #F3EBDD;    /* crema */
+  --borde: #E26C22;          /* naranja solo en bordes, nunca en texto */
+  --barra-fondo: #F0D9C4;
 }
 
 @media (prefers-color-scheme: dark) {
   html.modo-ninos:not([data-theme="light"]) {
-    --fondo: #0d1420;
-    --tarjeta: #162133;
-    --verde: #1565c0;
-    --verde-hover: #0d47a1;
-    --verde-texto: #9cc8ff;
-    --verde-suave: #1c2d47;
-    --borde: #7fb2f0;
-    --barra-fondo: #283a55;
+    --verde: #1F5FAE;        /* Azul Paz: letra blanca 6,4:1 */
+    --verde-hover: #14305C;
+    --verde-texto: #A9C8F2;
+    --verde-suave: #2C3F66;
+    --borde: #A9C8F2;
   }
   html.modo-jovenes:not([data-theme="light"]) {
-    --fondo: #140f1a;
-    --tarjeta: #21182b;
-    --verde: #6a1b9a;
-    --verde-hover: #4a148c;
-    --verde-texto: #dcb2f2;
-    --verde-suave: #2f2240;
-    --borde: #c48ee0;
-    --barra-fondo: #3a2b4a;
+    --verde: #14305C;
+    --verde-hover: #0C1F3D;
+    --verde-texto: #F4A769;
+    --verde-suave: #343E5E;
+    --borde: #F4A769;
   }
 }
 
 html.modo-ninos[data-theme="dark"] {
-  --fondo: #0d1420;
-  --tarjeta: #162133;
-  --verde: #1565c0;
-  --verde-hover: #0d47a1;
-  --verde-texto: #9cc8ff;
-  --verde-suave: #1c2d47;
-  --borde: #7fb2f0;
-  --barra-fondo: #283a55;
+  --verde: #1F5FAE;
+  --verde-hover: #14305C;
+  --verde-texto: #A9C8F2;
+  --verde-suave: #2C3F66;
+  --borde: #A9C8F2;
 }
 
 html.modo-jovenes[data-theme="dark"] {
-  --fondo: #140f1a;
-  --tarjeta: #21182b;
-  --verde: #6a1b9a;
-  --verde-hover: #4a148c;
-  --verde-texto: #dcb2f2;
-  --verde-suave: #2f2240;
-  --borde: #c48ee0;
-  --barra-fondo: #3a2b4a;
+  --verde: #14305C;
+  --verde-hover: #0C1F3D;
+  --verde-texto: #F4A769;
+  --verde-suave: #343E5E;
+  --borde: #F4A769;
 }
 
 .modo-barra {
@@ -1098,4 +1097,25 @@ html.modo-jovenes[data-theme="dark"] {
 
 #pantallaGuia h1 {
   font-size: 1.9rem;
+}
+
+/* ===== Versión 1.6: colores de la marca Familias de Paz ===== */
+
+.hueco.actual {
+  background: transparent;
+  outline-color: var(--versiculo-cita);
+}
+
+.jefe-amenaza,
+.mentor-mensaje {
+  color: var(--texto);
+}
+
+/* Botones deshabilitados (cartas bloqueadas, mundos cerrados): gris azulado de la marca */
+button:disabled,
+button:disabled:hover,
+div.carta.bloqueada {
+  background: var(--deshabilitado);
+  border-color: var(--deshabilitado);
+  color: #FFFFFF;
 }

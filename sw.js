@@ -5,7 +5,7 @@
    para que los jugadores reciban los archivos actualizados.
    ========================================= */
 
-const VERSION = "camino-salvacion-v1.5";
+const VERSION = "camino-salvacion-v1.6";
 
 const ARCHIVOS = [
   "./",
